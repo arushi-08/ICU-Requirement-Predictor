@@ -1,0 +1,48 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+            <title>COVID-19 Patient Pre-Condition Test</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="{{url_for('static', filename = 'css/normalize.min.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename = 'css/main.css')}}">
+         {% block link %} {% endblock %}
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body>
+
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <a href="{{url_for('home')}}"><h1 class="title">COVID-19 Patient Pre-Condition Test</h1></a>
+                <nav>
+                </nav>
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+                <div class="container">
+                <section>
+     
+                    {% block content %}
+                    <h2>Predicting ICU Requirement for patients being tested positive or even before is the need of the hour. In this regard, this is a predictive modelling site to render insights and analysis of Patient's Condition.
+                    </h2>
+                    <h3> Inner Dynamics: Predictions are based on Logistic Regression Model trained on <a href="https://www.kaggle.com/tanmoyx/covid19-patient-precondition-dataset">Kaggle Covid19 patient pre-condition dataset</a>
+                    </h3>
+                    <a href="{{url_for('train')}}">Start Training Model</a>
+                    {% endblock %}
+       
+                </section>
+                </div>
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+        <div class="footer-container">
+            <footer class="wrapper">
+                {%block footer %}{% endblock %}
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+{% extends "home.html" %}
+
+{% block title %}
+Project--Training
+{% endblock %}
+    
+{% block content %}
+    <section>
+        <h1>Model Testing</h1>
+        <form action="" method="post">
+           <input type="text" placeholder="Intubed" name="intubed" value="{{
+            request.form.intubed }}">
+           <input type="text" placeholder="Pneumonia" name="pneumonia" value="{{
+            request.form.pneumonia }}">
+           <input type="text" placeholder="Copd" name="copd" value="{{
+            request.form.copd }}">
+           <input type="text" placeholder="Asthma" name="asthma" value="{{
+            request.form.asthma }}">
+           <input type="text" placeholder="Inmsupr" name="inmsupr" value="{{
+            request.form.inmsupr }}">
+           <input type="text" placeholder="Other Disease" name="other_disease" value="{{
+            request.form.other_disease }}">
+            <input type="text" placeholder="Cardiovascular" name="cardiovascular" value="{{
+            request.form.cardiovascular }}">
+            <input type="text" placeholder="Obesity" name="obesity" value="{{
+            request.form.obesity }}">
+            <input type="text" placeholder="Covid Result" name="covid_res" value="{{
+            request.form.covid_res }}">
+            <input type="text" placeholder="Symptom to Death Period" name="symptom_to_death" value="{{
+            request.form.symptom_to_death }}">
+          <input class="btn btn-default" type="submit" value="Submit" align="center">
+              
+              <p> Status: {{status_code}} </p>
+              <p> Label: {{text}} </p>
+        </form>
+    </section>
+{% endblock %}

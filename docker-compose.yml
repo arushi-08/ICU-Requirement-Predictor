@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+    flask:
+        build: .
+        container_name: flask
+        command: python -u app.py
+        ports:
+            - "5000:5000"
+        environment:
+            MONGODB_HOST: db
+        links:
+#            - mongodb
+             - web
+
+#    mongodb:
+#        image: mongo:4.4.0
+#        container_name: mongodb
+#        ports:
+#          - '27017:27017'
+
+    web:
+      image: 'gitlab/gitlab-ee:latest'
+      restart: always
+      hostname: 'gitlab.example.com'
+      environment:
+        GITLAB_OMNIBUS_CONFIG: |
+          external_url 'https://gitlab.example.com'
+          # Add any other gitlab.rb configuration here, each on its own line
+      ports:
+        - '80:80'
+        - '443:443'
+        - '2222:22'
+#      volumes:
+#        - '$GITLAB_HOME/config:/etc/gitlab'
+#        - '$GITLAB_HOME/logs:/var/log/gitlab'
+#        - '$GITLAB_HOME/data:/var/opt/gitlab'

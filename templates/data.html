@@ -1,0 +1,209 @@
+<style>
+#table-wrapper {
+  position:relative;
+}
+#table-scroll {
+  height:250px;
+  overflow:auto;
+  margin-top:30px;
+}
+#table-wrapper table {
+  width:100%;
+}
+#table-wrapper table * {
+  color:black;
+}
+#table-wrapper table thead th .text {
+  position:absolute;
+  height:50px;
+  width:100%;
+}
+</style>
+
+{% extends "home.html" %}
+
+{% block title %}
+Project--Training
+{% endblock %}
+    
+{% block content %}
+
+<div id="table-wrapper">
+    <div id = "table-scroll">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>sex</th>
+      <th>patient_type</th>
+      <th>entry_date</th>
+      <th>date_symptoms</th>
+      <th>date_died</th>
+      <th>intubed</th>
+      <th>pneumonia</th>
+      <th>age</th>
+      <th>pregnancy</th>
+      <th>diabetes</th>
+      <th>copd</th>
+      <th>asthma</th>
+      <th>inmsupr</th>
+      <th>hypertension</th>
+      <th>other_disease</th>
+      <th>cardiovascular</th>
+      <th>obesity</th>
+      <th>renal_chronic</th>
+      <th>tobacco</th>
+      <th>contact_other_covid</th>
+      <th>covid_res</th>
+      <th>icu</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>16169f</td>
+      <td>2</td>
+      <td>1</td>
+      <td>04-05-2020</td>
+      <td>02-05-2020</td>
+      <td>9999-99-99</td>
+      <td>97</td>
+      <td>2</td>
+      <td>27</td>
+      <td>97</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>1</td>
+      <td>97</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1009bf</td>
+      <td>2</td>
+      <td>1</td>
+      <td>19-03-2020</td>
+      <td>17-03-2020</td>
+      <td>9999-99-99</td>
+      <td>97</td>
+      <td>2</td>
+      <td>24</td>
+      <td>97</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>99</td>
+      <td>1</td>
+      <td>97</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>167386</td>
+      <td>1</td>
+      <td>2</td>
+      <td>06-04-2020</td>
+      <td>01-04-2020</td>
+      <td>9999-99-99</td>
+      <td>2</td>
+      <td>2</td>
+      <td>54</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+      <td>99</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0b5948</td>
+      <td>2</td>
+      <td>2</td>
+      <td>17-04-2020</td>
+      <td>10-04-2020</td>
+      <td>9999-99-99</td>
+      <td>2</td>
+      <td>1</td>
+      <td>30</td>
+      <td>97</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>99</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0d01b5</td>
+      <td>1</td>
+      <td>2</td>
+      <td>13-04-2020</td>
+      <td>13-04-2020</td>
+      <td>22-04-2020</td>
+      <td>2</td>
+      <td>2</td>
+      <td>60</td>
+      <td>2</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>1</td>
+      <td>2</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>99</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    </div>
+{% endblock %}
+{%block footer %}
+    <p> Feature Description </p>
+    <p>sex: 1: Female and 2: Male</p>
+    <p>patient_type: 1: Outpatient and 2: Inpatient</p>
+        <p>entry_data: Date of Entry into hospital</p>
+            <p>date_symptoms: Date of first symptoms</p>
+<p>date_died: Date of death (9999-99-99: NA)</p>
+                <p>intubed, pneumonia, pregnancy, diabetes, copd, asthma, inmsupr, hypertension, other_disease, cardiovascular, obesity, renal_chronic, tobacco, contact_other_covid: 1: Yes, 2: No and 97,98,99: NA</p>
+                    <p>covid_res: 1: Positive and 2: Negative</p>
+                        <p>icu: 1: Yes and 2: No</p>
+         {% endblock %}
+

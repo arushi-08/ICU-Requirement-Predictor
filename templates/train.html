@@ -1,0 +1,42 @@
+<style>
+    span#sysStatus{
+      display: block;
+      height: 50px;
+    }
+</style>
+{% extends "home.html" %}
+
+{% block title %}
+Project--Training
+{% endblock %}
+    
+{% block content %}
+    <section>
+        <h1>Goal: ICU Requirement Prediction</h1>
+        <a href="{{url_for('predict')}}"><h2>Model Testing</h2></a>
+        {% for item in rows %}
+            {% if item=="Step 3: Selecting top 10 features" %}
+                <img src = '../static/images/deathplot.png' width=850, height=250>
+                <img src = '../static/images/covid_icu.png' width=850, height=250>
+            {% endif %}
+            
+            {% if item=="Plot ready" %}
+                <img src = '../static/images/plt.png' width=850, height=250>
+            {% endif %}
+        <span id='sysStatus'>{{item}}</span>
+        {% endfor %}
+        
+    </section>
+{% endblock %}
+
+<script>
+$(document).ready(function() {
+    setInterval("ajaxd()",10000); // call every 10 seconds
+});
+
+function ajaxd() {
+  //reload result into element with id "sysStatus"
+  $("#sysStatus").load("/myStatus", function() {  alert( "Load was performed." ); });
+
+}
+</script>
