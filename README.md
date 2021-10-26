@@ -10,7 +10,7 @@ Usage
 
 Using the [Kaggle Covid19 patient pre-condition dataset](https://www.kaggle.com/tanmoyx/covid19-patient-precondition-dataset), the tool provides real-time training and testing.
 The inner dynamics consist of data cleaning, visualizing and selecting the most relevant independent features for ICU requirement prediction.
-The training of a Logistic Regression Model
+Subsequently the training is done on the Logistic Regression Model for quick results.
 
 
 Installation
