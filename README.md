@@ -3,7 +3,7 @@
 Introduction
 ------------
 
-Predicting ICU Requirement for patients being tested Covid-19 positive or even before is the need of the hour. In this regard, this is a simple predictive modelling project to render insights and analysis of Patient's Condition.
+Predicting ICU Requirement for patients being tested Covid-19 positive or even before is the need of the hour. In this regard, this is a predictive modelling project to render insights and analysis of Patient's Condition.
 
 Usage
 -----
